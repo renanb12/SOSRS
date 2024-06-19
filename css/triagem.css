@@ -1,0 +1,65 @@
+/* Estilos CSS podem ser inseridos aqui ou em um arquivo externo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    height: 50px;
+}
+
+nav h1 {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.main {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 400px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 250px;
+
+    height: 40px;
+
+}
+
+.btn-voltar {
+    border: none;
+}
+
+.btn-proximo {
+    width: 100px;
+    border-radius: 5px;
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF)
+}
