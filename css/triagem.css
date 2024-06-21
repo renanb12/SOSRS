@@ -1,26 +1,27 @@
 /* Estilos CSS podem ser inseridos aqui ou em um arquivo externo */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    background: #242C3B;
 }
 
 nav {
-    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF);
     color: #fff;
     padding: 10px;
     height: 50px;
+
+    
 }
 
-nav h1 {
-    display: flex;
-    justify-content: left;
-    text-align: left;
+#sosrs {
+    margin-top: 8px;
+    font-size: 26px;
 }
 
 footer {
-    background-color: #333;
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF);
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -30,17 +31,15 @@ footer {
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
 }
 
 .main {
-    background-color: #f2f2f2;
+    background-color: #fff;
     padding: 20px;
     margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     height: 400px;
 }
 
@@ -48,18 +47,36 @@ footer {
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: 250px;
+    top: 320px;
 
     height: 40px;
 
 }
 
 .btn-voltar {
-    border: none;
+    color: #000;
+    text-decoration: none;
 }
 
 .btn-proximo {
+    text-align:center;
+    padding: 7.5px;
+    
+    color: #000;
+    text-decoration: none;
     width: 100px;
     border-radius: 5px;
-    background: linear-gradient(110deg, #3AA5E9, #3D62CF)
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF);
+}
+
+#img_voltar {
+    margin: 8px 7px -7px 0px;
+    display: inline-block;
+}
+
+#hr {
+    width: 100%;
+    position: relative;
+    top: 300px;
+    
 }
