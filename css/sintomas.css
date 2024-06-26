@@ -1,0 +1,134 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+ .voltar {
+    text-align: center;
+    padding-top: 5px;
+    margin-bottom: 80px;
+
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF);
+    height: 30px;
+    width: 35px;
+    border-radius: 10px;
+ }
+
+ /* #img_voltar {
+    
+  } */
+
+.content {
+    background-color: #e0f2ff;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#boneco {
+    width: 144px;
+    height: 369px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.symptoms-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+.symptom-option.selected {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.symptom-option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #e7f3fe;
+    border: 2px dashed #2196f3;
+    color: #2196f3;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #293440;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer a {
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+
+    .input-container input {
+        font-size: 18px;
+    }
+
+    .symptom {
+        padding: 15px;
+    }
+
+    .footer button {
+        padding: 15px 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}

@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SOSRS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sintomas.css">
 </head>
 
 <body>
-    
+    <div class="container">
+        <div class="content">
+            <div class="voltar">
+                <a href="triagem.html" id="img_voltar"><img src="img/icons8-voltar-24 (2).png" alt="Voltar"></a>
+            </div>
+
+            <h2>Selecione seus sintomas</h2>
+
+            <div class="input-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Pesquisar sintomas..."
+                    onkeyup="filterSymptoms()">
+            </div>
+
+            <div class="symptoms-container" id="symptoms-container">
+                <div class="symptom-option" onclick="selectSymptom(this, 'Febre')">Febre</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Náusea')">Náusea</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Tosse')">Tosse</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Dor muscular')">Dor muscular</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Fadiga')">Fadiga</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Calafrios')">Calafrios</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Dor abdominal')">Dor abdominal</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Perda de apetite')">Perda de apetite</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Falta de ar')">Falta de ar</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Palpitações')">Palpitações</div>
+            </div>
+            <p id="add-more-message">Por favor, tente adicionar mais sintomas.</p>
+        </div>
+        <div class="footer">
+            <div>0 Sintomas</div>
+            <a href="#" class="button" onclick="submitSymptoms()">Adicionar</a>
+        </div>
+    </div>
+
+    <script src="js/add-symptoms.js"></script>
 </body>
+
 </html>

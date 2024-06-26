@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptomate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .header img {
+            width: 30px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .content h2 {
+            font-size: 16px;
+            margin: 0 0 10px 0;
+        }
+        .symptoms-container {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            padding-right: 10px; /* For scrollbar space */
+        }
+        .symptom-option {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border: 2px dashed #2196f3;
+            color: #2196f3;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .symptom-option.selected {
+            background-color: #d4edda;
+            border-color: #28a745;
+            color: #28a745;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            font-size: 12px;
+            color: #aaa;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Symptomate Logo">
+            <h1>Adicionar Sintomas</h1>
+        </div>
+        <div class="content">
+            <h2>Selecione seus sintomas</h2>
+            <input type="text" id="search-input" class="search-input" placeholder="Pesquisar sintomas..." onkeyup="filterSymptoms()">
+            <div class="symptoms-container" id="symptoms-container">
+                <div class="symptom-option" onclick="selectSymptom(this, 'Febre')">Febre</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Náusea')">Náusea</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Tosse')">Tosse</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Dor muscular')">Dor muscular</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Fadiga')">Fadiga</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Calafrios')">Calafrios</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Dor abdominal')">Dor abdominal</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Perda de apetite')">Perda de apetite</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Falta de ar')">Falta de ar</div>
+                <div class="symptom-option" onclick="selectSymptom(this, 'Palpitações')">Palpitações</div>
+            </div>
+            <p id="add-more-message">Por favor, tente adicionar mais sintomas.</p>
+            <a href="#" class="button" onclick="submitSymptoms()">Adicionar</a>
+        </div>
+        <div class="footer">
+            © 2024 Infermedica
+        </div>
+    </div>
+    <script src="js/add-symptoms.js"></script>
+</body>
+</html>
