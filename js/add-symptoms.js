@@ -1,12 +1,29 @@
 const selectedSymptoms = [];
 
 function selectSymptom(element, symptom) {
-    if (!selectedSymptoms.includes(symptom)) {
+    const index = selectedSymptoms.indexOf(symptom);
+    if (index === -1) {
         selectedSymptoms.push(symptom);
         element.classList.add('selected');
+    } else {
+        selectedSymptoms.splice(index, 1);
+        element.classList.remove('selected');
     }
+    updateSymptomCount();
+    toggleAddMoreMessage();
+}
+
+function updateSymptomCount() {
+    const symptomCount = selectedSymptoms.length;
+    document.getElementById('symptom-count').innerText = `${symptomCount} Sintomas`;
+}
+
+function toggleAddMoreMessage() {
+    const messageElement = document.getElementById('add-more-message');
     if (selectedSymptoms.length >= 3) {
-        document.getElementById('add-more-message').classList.add('hidden');
+        messageElement.classList.add('hidden');
+    } else {
+        messageElement.classList.remove('hidden');
     }
 }
 

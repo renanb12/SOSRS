@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título da Página</title>
+    <title>SOSRS</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/triagem.css">
 </head>
-
 <body>
-
-    <nav>
-        <div class="container">
-            <h1 id="sosrs">SOSRS</h1>
-
-            <a href=""><img src="img/icons8-cardápio-30.png" alt="Menu"></a>
-        </div>
-    </nav>
-
     <div class="container">
-        <section class="main">
-            <h1><b>Adicione seus sintomas</b></h1>
-            <p>Conteúdo principal da página.</p>
-            <hr id="hr">
-            <div class="botoes">
-                <a href="" class="btn-voltar"><img id="img_voltar" src="img/icons8-voltar-24.png" alt="Voltar">Voltar</a>
-                <a class="btn-proximo" href="sintomas.html"><b>Próximo</b></a>
-            </div>
-
-        </section>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 SOSRS. Todos os direitos reservados.</p>
+        <div class="header">
+            <img src="logo.png" alt="Symptomate Logo">
+            <h1>Symptomate</h1>
         </div>
-    </footer>
+        <div class="progress-bar">
+            <div></div>
+        </div>
+        <div class="content">
+            <h2>Adicione seus sintomas</h2>
+            <div class="symptoms-container" id="symptoms-container">
 
+                <div id="additional-symptoms"></div>
+            </div>
+            <a href="sintomas.html" class="add-symptom">+ Adicionar sintoma</a>
+            <div class="info">Por favor, tente adicionar mais sintomas.</div>
+            <a href="#" class="button back-button">Voltar</a>
+            <a href="#" class="button">Próximo</a>
+        </div>
+        <div class="footer">
+            © 2024 Infermedica
+        </div>
+    </div>
+    <script src="js/triagem.js"></script>
 </body>
-
 </html>

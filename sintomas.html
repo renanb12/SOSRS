@@ -13,7 +13,7 @@
     <div class="container">
         <div class="content">
             <div class="voltar">
-                <a href="triagem.html" id="img_voltar"><img src="img/icons8-voltar-24 (2).png" alt="Voltar"></a>
+                <a href="triagem.html" id="img_voltar"><img src="icons/icons8-voltar-24 (2).png" alt="Voltar"></a>
             </div>
 
             <h2>Selecione seus sintomas</h2>
@@ -38,12 +38,25 @@
             <p id="add-more-message">Por favor, tente adicionar mais sintomas.</p>
         </div>
         <div class="footer">
-            <div>0 Sintomas</div>
+            <div class="sintomas" id="symptom-count">0 Sintomas</div>
             <a href="#" class="button" onclick="submitSymptoms()">Adicionar</a>
         </div>
     </div>
 
     <script src="js/add-symptoms.js"></script>
+    <script>
+        // Função para lidar com a passagem do animal selecionado
+        function getSelectedAnimalFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedAnimal = urlParams.get('selectedAnimal');
+            if (selectedAnimal) {
+                alert(`Animal selecionado: ${selectedAnimal}`);
+            }
+        }
+
+        // Chame a função ao carregar a página
+        window.onload = getSelectedAnimalFromURL;
+    </script>
 </body>
 
 </html>
