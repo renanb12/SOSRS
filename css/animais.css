@@ -1,7 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f5f5f5;
 }
 
@@ -32,39 +29,43 @@ h2 {
     margin-bottom: 20px;
 }
 
-.species-section {
+.animal-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-.species-section h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.species-section ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.species-section li {
-    background-color: #e7f3fe;
-    border: 1px solid #2196f3;
-    color: #2196f3;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.species-section li img {
-    width: 50px;
-    height: 50px;
+.animal-images img {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 5px;
-    margin-right: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
 }
 
-.species-section li span {
+.animal-images img.selected {
+    border: 3px solid #2196f3;
+}
+
+.confirm-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm-button:disabled {
+    background-color: #b0c4de;
+}
+
+.confirm-button:hover:not(:disabled) {
+    background-color: #1976d2;
 }

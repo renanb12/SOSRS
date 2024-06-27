@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Animal</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/cobra.css">
+    <link rel="stylesheet" href="css/animais.css">
 </head>
 
 <body>
     <div class="container">
         <div class="content">
             <div class="voltar">
-                <a href="especies.html" id="img_voltar"><img src="icons/icons8-voltar-24 (2).png" alt="Voltar"></a>
+                <a href="triagem.html" id="img_voltar"><img src="icons/icons8-voltar-24.png" alt="Voltar"></a>
             </div>
 
             <h2 id="animal-title">Detalhes do Animal</h2>
@@ -26,50 +26,7 @@
         </div>
     </div>
 
-    <script>
-        // Obtendo parâmetros da URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const animalType = urlParams.get('type');
-        const animalName = urlParams.get('name');
-
-        document.getElementById('animal-title').innerText = `Detalhes do ${animalName}`;
-
-        const animalImages = document.getElementById('animal-images');
-        let selectedImage = null;
-
-        // Adicionando imagens do animal dinamicamente (substitua com suas próprias imagens)
-        const images = [
-            { src: `images/${animalType}1.jpg`, species: `${animalName} 1` },
-            { src: `images/${animalType}2.jpg`, species: `${animalName} 2` },
-            { src: `images/${animalType}3.jpg`, species: `${animalName} 3` }
-        ];
-
-        images.forEach(imgData => {
-            const img = document.createElement('img');
-            img.src = imgData.src;
-            img.alt = imgData.species;
-            img.classList.add('animal-image');
-            img.onclick = () => selectImage(img, imgData.species);
-            animalImages.appendChild(img);
-        });
-
-        function selectImage(img, species) {
-            if (selectedImage) {
-                selectedImage.classList.remove('selected');
-            }
-            selectedImage = img;
-            selectedImage.classList.add('selected');
-            document.getElementById('confirm-button').disabled = false;
-            selectedImage.dataset.species = species;
-        }
-
-        function confirmAnimal() {
-            if (selectedImage) {
-                const selectedSpecies = selectedImage.dataset.species;
-                window.location.href = `index.html?selectedAnimal=${encodeURIComponent(selectedSpecies)}`;
-            }
-        }
-    </script>
+    <script src="js/animal.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolher Animal</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .animal-option {
+            display: inline-block;
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .animal-option img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .animal-option p {
+            margin: 5px 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header">
+                <h1>Escolher Animal</h1>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="animal-option" onclick="selectAnimal('Cobra')">
+                <img src="images/cobra.png" alt="Cobra">
+                <p>Cobra</p>
+            </div>
+            <div class="animal-option" onclick="selectAnimal('Escorpião')">
+                <img src="images/escorpiao.png" alt="Escorpião">
+                <p>Escorpião</p>
+            </div>
+            <div class="animal-option" onclick="selectAnimal('Aranha')">
+                <img src="images/aranha.png" alt="Aranha">
+                <p>Aranha</p>
+            </div>
+            <div class="animal-option" onclick="selectAnimal('Lacraia')">
+                <img src="images/lacraia.png" alt="Lacraia">
+                <p>Lacraia</p>
+            </div>
+            <div class="animal-option" onclick="takePhoto()">
+                <img src="images/camera.png" alt="Bater Foto">
+                <p>Bater Foto</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function selectAnimal(animal) {
+            const params = new URLSearchParams(window.location.search);
+            const symptoms = params.get('symptoms');
+            const url = `triagem.html?symptoms=${symptoms}&selectedAnimal=${animal}`;
+            window.location.href = url;
+        }
+
+        function takePhoto() {
+            // Implement the camera functionality here
+            alert('Funcionalidade de Bater Foto ainda não implementada.');
+        }
+    </script>
+</body>
+
+</html>

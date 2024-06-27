@@ -1,0 +1,91 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.header img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.content h2 {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+.symptoms-container {
+    margin-bottom: 10px;
+}
+
+.symptom {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px 0;
+    white-space: nowrap;
+}
+
+.selected-animal {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.footer {
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    background-color: #ddd;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.diagnosis {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    border-radius: 5px;
+}

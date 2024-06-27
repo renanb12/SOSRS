@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,58 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/triagem.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <img src="logo.png" alt="Symptomate Logo">
-            <h1>Symptomate</h1>
-        </div>
-        <div class="progress-bar">
-            <div></div>
-        </div>
-        <div class="content">
-            <h2>Adicione seus sintomas</h2>
-            <div class="symptoms-container" id="symptoms-container">
 
-                <div id="additional-symptoms"></div>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header">
+                <h1>SOSRS</h1>
             </div>
-            <a href="sintomas.html" class="add-symptom">+ Adicionar sintoma</a>
-            <div class="info">Por favor, tente adicionar mais sintomas.</div>
-            <a href="#" class="button back-button">Voltar</a>
-            <a href="#" class="button">Próximo</a>
         </div>
-        <div class="footer">
-            © 2024 Infermedica
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="progress-bar">
+                <div></div>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="content">
+                <h2>Adicione seus sintomas</h2>
+                <div class="symptoms-container" id="symptoms-container">
+                    <div id="additional-symptoms"></div>
+                </div>
+                <a href="sintomas.html" class="add-symptom">+ Adicionar sintoma</a>
+                <div class="info">Por favor, tente adicionar mais sintomas.</div>
+                <div class="dropdown">
+                    <button class="button dropbtn">Escolher animal</button>
+                    <div class="dropdown-content">
+                        <a href="cobra.html">Cobra</a>
+                        <a href="aranha.html">Aranha</a>
+                        <a href="escorpiao.html">Escorpião</a>
+                        <a href="lacraia.html">Lacraia</a>
+                        <a href="cam.html">Bater Foto</a>
+                    </div>
+                </div>
+                <a href="#" class="button back-button">Voltar</a>
+                <a href="#" class="button" onclick="submitToDiagnosis()">Próximo</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                © 2024 SOSRS
+            </div>
+        </div>
+    </footer>
     <script src="js/triagem.js"></script>
 </body>
+
 </html>
