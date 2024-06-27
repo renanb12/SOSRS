@@ -15,12 +15,8 @@
     border-radius: 10px;
  }
 
- /* #img_voltar {
-    
-  } */
-
 .content {
-    background-color: #e0f2ff;
+    background-color: #f5f5f5;
     padding: 20px;
     flex-grow: 1;
     display: flex;

@@ -1,54 +1,23 @@
 function removeSymptom(id) {
     var symptomElement = document.getElementById(id);
-    symptomElement.style.display = 'none';
+    symptomElement.parentElement.removeChild(symptomElement);
 }
 
 function submitToDiagnosis() {
     const symptomsContainer = document.getElementById('additional-symptoms');
     const symptomElements = symptomsContainer.getElementsByClassName('symptom');
     const symptoms = Array.from(symptomElements).map(element => element.innerText.replace(' ×', ''));
-    const selectedAnimal = document.getElementById('selected-animal').innerText.split(': ')[1];
+    const selectedAnimalElement = document.getElementById('selected-animal');
+
+    if (symptoms.length === 0) {
+        alert('Por favor, adicione pelo menos um sintoma.');
+        return;
+    }
+
+    const selectedAnimal = selectedAnimalElement.innerText.split(': ')[1];
 
     const url = `diagnostico.html?symptoms=${symptoms.join(',')}&selectedAnimal=${selectedAnimal}`;
     window.location.href = url;
-}
-
-function diagnose(symptoms, animal) {
-    const possibleConditions = {
-        cobra: {
-            'Dor de cabeça': 'Envenenamento por cobra',
-            'Febre': 'Infecção bacteriana',
-            'Náusea': 'Envenenamento alimentar'
-        },
-        aranha: {
-            'Dor de cabeça': 'Envenenamento por aranha',
-            'Febre': 'Infecção viral',
-            'Náusea': 'Envenenamento por aranha'
-        },
-        escorpiao: {
-            'Dor de cabeça': 'Envenenamento por escorpião',
-            'Febre': 'Infecção bacteriana',
-            'Náusea': 'Envenenamento por escorpião'
-        },
-        lacraia: {
-            'Dor de cabeça': 'Reação alérgica',
-            'Febre': 'Infecção viral',
-            'Náusea': 'Reação alérgica'
-        }
-    };
-
-    let conditions = [];
-    symptoms.forEach(symptom => {
-        if (possibleConditions[animal] && possibleConditions[animal][symptom]) {
-            conditions.push(possibleConditions[animal][symptom]);
-        }
-    });
-
-    if (conditions.length === 0) {
-        conditions.push('Condição não identificada');
-    }
-
-    return conditions.join(', ');
 }
 
 window.onload = function () {
@@ -69,6 +38,9 @@ window.onload = function () {
     }
 
     if (selectedAnimal) {
-        document.getElementById('selected-animal').innerText = `Animal selecionado: ${selectedAnimal}`;
+        const selectedAnimalElement = document.createElement('div');
+        selectedAnimalElement.id = 'selected-animal';
+        selectedAnimalElement.innerText = `Animal selecionado: ${selectedAnimal}`;
+        document.querySelector('.content').insertBefore(selectedAnimalElement, document.querySelector('.info'));
     }
 }

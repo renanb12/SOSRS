@@ -56,11 +56,20 @@ function diagnose(symptoms) {
         }
     });
 
-    if (possibleDiseases.length === 0) {
-        return 'Nenhuma doença correspondente encontrada.';
+    const symptomKey = symptoms.join(',');
+
+    if (possibleConditions[animal] && possibleConditions[animal][symptomKey]) {
+        return possibleConditions[animal][symptomKey];
+    } else {
+        return "Condição desconhecida. Consulte um médico.";
     }
+}
 
-    possibleDiseases.sort((a, b) => b.matchCount - a.matchCount);
+window.onload = function () {
+    const params = new URLSearchParams(window.location.search);
+    const symptoms = params.get('symptoms').split(',');
+    const selectedAnimal = params.get('selectedAnimal');
 
-    return `Possível diagnóstico: ${possibleDiseases[0].name}`;
+    const diagnosis = diagnose(symptoms, selectedAnimal);
+    document.getElementById('diagnosis-result').innerText = `Animal: ${selectedAnimal}\nSintomas: ${symptoms.join(', ')}\n\nDiagnóstico: ${diagnosis}`;
 }
