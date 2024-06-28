@@ -156,20 +156,27 @@
         }
 
         function diagnose(symptoms) {
-            const diseases = [
-                {
-                    name: 'Gripe',
-                    symptoms: ['Febre', 'Tosse', 'Fadiga', 'Dor muscular']
+            const diseases = [{
+                    name: 'Leptospirose',
+                    symptoms: ['Febre', 'Dor de cabeça', 'Sangramento', 'Dor muscular', 'Calafrio','Olhos vermelhos', 'Vômitos']
                 },
                 {
-                    name: 'Covid-19',
-                    symptoms: ['Febre', 'Tosse', 'Fadiga', 'Falta de ar', 'Perda de apetite']
+                    name: 'Tétano',
+                    symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
+                },
+                {
+                    name: 'Diarreia aguda',
+                    symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
+                },
+                {
+                    name: 'Hepatite A',
+                    symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
                 },
                 {
                     name: 'Dengue',
                     symptoms: ['Febre', 'Dor muscular', 'Dor abdominal', 'Fadiga', 'Náusea']
                 }
-                // Adicione mais doenças e sintomas conforme necessário
+
             ];
 
             let possibleDiseases = [];
