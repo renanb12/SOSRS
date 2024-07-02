@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo da página */
+    background-color: #f5f5f5; /* Cor de fundo do corpo da página */
+    display: flex;
+    justify-content: center; /* Centraliza conteúdo horizontalmente */
+    align-items: center; /* Centraliza conteúdo verticalmente */
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    margin: 0; /* Remove margens padrão */
+}
+
+.container {
+    background-color: #fff; /* Cor de fundo do container */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Alinhamento do texto centralizado */
+    border-radius: 8px; /* Borda arredondada */
+}
+
+.container h1 {
+    font-size: 24px; /* Tamanho da fonte do título principal */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.container button {
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF); /* Gradiente de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Borda arredondada do botão */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    font-size: 16px; /* Tamanho da fonte do texto do botão */
+}

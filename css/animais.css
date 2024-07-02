@@ -21,7 +21,10 @@ body {
 }
 
 .voltar img {
-    width: 24px;
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF);
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
 }
 
 h2 {

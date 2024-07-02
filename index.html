@@ -5,56 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - SOSRS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border-radius: 8px;
-        }
-
-        .container h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .container button {
-            padding: 10px 20px;
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .container button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css"> <!-- Inclui o arquivo de estilos CSS específico para a página inicial -->
 </head>
 
 <body>
     <div class="container">
-        <h1>Bem-vindo ao SOSRS</h1>
-        <p>Você deseja iniciar um diagnóstico?</p>
-        <button onclick="startDiagnosis()">Iniciar Diagnóstico</button>
+        <h1>Bem-vindo ao SOSRS</h1> <!-- Título principal da página -->
+        <p>Você deseja iniciar um diagnóstico?</p> <!-- Mensagem de introdução -->
+        <button onclick="startDiagnosis()">Iniciar Diagnóstico</button> <!-- Botão para iniciar o diagnóstico -->
     </div>
 
     <script>
         function startDiagnosis() {
-            window.location.href = 'triagem.html';
+            window.location.href = 'triagem.html'; // Função para redirecionar o usuário para a página de triagem ao clicar no botão
         }
     </script>
 </body>

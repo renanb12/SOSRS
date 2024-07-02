@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOSRS</title>
+    <!-- Inclusão de arquivos de estilo CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/triagem.css">
 </head>
 
 <body>
 
+    <!-- Cabeçalho -->
     <header>
         <div class="container">
             <div class="header">
@@ -19,26 +21,35 @@
         </div>
     </header>
 
+    <!-- Navegação (Barra de Progresso) -->
     <nav>
         <div class="container">
             <div class="progress-bar">
+                <!-- A barra de progresso será preenchida dinamicamente -->
                 <div></div>
             </div>
         </div>
     </nav>
 
+    <!-- Seção Principal de Conteúdo -->
     <section>
         <div class="container">
             <div class="content">
                 <h2>Adicione seus sintomas</h2>
+                <!-- Container para listar sintomas adicionados dinamicamente -->
                 <div class="symptoms-container" id="symptoms-container">
                     <div id="additional-symptoms"></div>
                 </div>
+                <!-- Link para adicionar mais sintomas -->
                 <a href="sintomas.html" class="add-symptom">+ Adicionar sintoma</a>
+                <!-- Mensagem informativa para adicionar mais sintomas -->
                 <div class="info" id="add-more-message">Por favor, tente adicionar mais sintomas.</div>
+                <!-- Exibição do animal selecionado (inicialmente nenhum) -->
                 <div id="selected-animal" class="selected-animal">Animal selecionado: Nenhum</div>
+                <!-- Dropdown para escolher entre diferentes animais -->
                 <div class="dropdown">
                     <button class="button dropbtn">Escolher animal</button>
+                    <!-- Opções de animais disponíveis -->
                     <div class="dropdown-content">
                         <a href="cobra.html">Cobra</a>
                         <a href="aranha.html">Aranha</a>
@@ -47,19 +58,25 @@
                         <a href="cam.html">Bater Foto</a>
                     </div>
                 </div>
+                <!-- Botão para voltar à página inicial -->
                 <a href="index.html" class="button back-button">Voltar</a>
+                <!-- Botão para avançar para a próxima etapa (com função JavaScript associada) -->
                 <a href="#" class="button" onclick="submitToDiagnosis()">Próximo</a>
             </div>
         </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
         <div class="container">
             <div class="footer">
+                <!-- Informação de copyright -->
                 © 2024 SOSRS
             </div>
         </div>
     </footer>
+
+    <!-- Inclusão de arquivo JavaScript -->
     <script src="js/triagem.js"></script>
 </body>
 

@@ -1,130 +1,133 @@
+/* Estilo para o container principal */
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100vh; /* Utiliza a altura total da viewport */
 }
 
- .voltar {
-    text-align: center;
+/* Estilo para o botão de voltar */
+.voltar {
+    text-align: center; /* Centraliza o texto */
     padding-top: 5px;
-    margin-bottom: 80px;
+    margin-bottom: 80px; /* Espaçamento inferior */
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF); /* Gradiente de fundo */
+    height: 30px; /* Altura do botão */
+    width: 35px; /* Largura do botão */
+    border-radius: 10px; /* Borda arredondada */
+}
 
-    background: linear-gradient(110deg, #3AA5E9, #3D62CF);
-    height: 30px;
-    width: 35px;
-    border-radius: 10px;
- }
-
+/* Estilo para o conteúdo principal */
 .content {
-    background-color: #f5f5f5;
-    padding: 20px;
-    flex-grow: 1;
+    background-color: #f5f5f5; /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno */
+    flex-grow: 1; /* Cresce para ocupar espaço restante */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Alinha em coluna */
 }
 
-#boneco {
-    width: 144px;
-    height: 369px;
-    margin-bottom: 20px;
-}
-
+/* Estilo para o container do campo de entrada */
 .input-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
+    display: flex; /* Alinha em linha */
+    align-items: center; /* Alinha itens verticalmente */
+    width: 100%; /* Largura total */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
+/* Estilo para o campo de entrada de texto */
 .input-container input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 16px;
+    padding: 10px; /* Preenchimento interno */
+    border: 1px solid #ccc; /* Borda com cor e estilo */
+    border-radius: 5px; /* Borda arredondada */
+    width: 100%; /* Largura total */
+    font-size: 16px; /* Tamanho da fonte */
 }
 
+/* Estilo para o container de sintomas */
 .symptoms-container {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    padding-right: 10px;
+    max-height: 300px; /* Altura máxima */
+    overflow-y: auto; /* Rolagem vertical se necessário */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    padding-right: 10px; /* Preenchimento direito */
 }
 
+/* Estilo para opção de sintoma selecionada */
 .symptom-option.selected {
-    background-color: #d4edda;
-    border-color: #28a745;
-    color: #28a745;
+    background-color: #d4edda; /* Cor de fundo quando selecionado */
+    border-color: #28a745; /* Cor da borda quando selecionado */
+    color: #28a745; /* Cor do texto quando selecionado */
 }
 
+/* Estilo para opção de sintoma */
 .symptom-option {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #e7f3fe;
-    border: 2px dashed #2196f3;
-    color: #2196f3;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 10px 0;
-    cursor: pointer;
+    display: block; /* Mostra como bloco */
+    width: 100%; /* Largura total */
+    padding: 10px; /* Preenchimento interno */
+    background-color: #e7f3fe; /* Cor de fundo */
+    border: 2px dashed #2196f3; /* Borda tracejada */
+    color: #2196f3; /* Cor do texto */
+    text-align: center; /* Alinhamento central do texto */
+    text-decoration: none; /* Sem decoração de texto */
+    border-radius: 5px; /* Borda arredondada */
+    margin: 10px 0; /* Espaçamento externo */
+    cursor: pointer; /* Cursor de ponteiro */
 }
 
+/* Estilo para o rodapé */
 .footer {
-    background-color: #293440;
-    color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #293440; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    display: flex; /* Alinha em linha */
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: space-between; /* Espaço entre itens */
 }
 
+/* Estilo para o link de botão no rodapé */
 .footer a {
-    background: linear-gradient(110deg, #3AA5E9, #3D62CF);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+    background: linear-gradient(110deg, #3AA5E9, #3D62CF); /* Gradiente de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Preenchimento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro */
+    text-decoration: none; /* Sem decoração de texto */
 }
 
+/* Classe para esconder elementos */
 .hidden {
-    display: none;
+    display: none; /* Esconde o elemento */
 }
 
-/* Media queries for larger screens */
+/* Media queries para telas maiores */
 @media (min-width: 768px) {
-
     .input-container input {
-        font-size: 18px;
+        font-size: 18px; /* Tamanho da fonte aumentado */
     }
 
     .symptom {
-        padding: 15px;
+        padding: 15px; /* Preenchimento interno aumentado */
     }
 
     .footer button {
-        padding: 15px 30px;
+        padding: 15px 30px; /* Preenchimento interno aumentado */
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        max-width: 800px;
-        margin: 40px auto;
+        max-width: 800px; /* Largura máxima do container */
+        margin: 40px auto; /* Margem automática nas laterais */
     }
 
     .header {
-        padding: 20px;
+        padding: 20px; /* Preenchimento interno */
     }
 
     .content {
-        padding: 30px;
+        padding: 30px; /* Preenchimento interno aumentado */
     }
 
     .footer {
-        padding: 20px;
+        padding: 20px; /* Preenchimento interno */
     }
 }
