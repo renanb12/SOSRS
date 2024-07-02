@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOSRS</title>
+    <!-- Inclusão de arquivos de estilo CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/sintomas.css">
 </head>
@@ -12,18 +13,22 @@
 <body>
     <div class="container">
         <div class="content">
+            <!-- Botão de voltar para a página de triagem -->
             <div class="voltar">
                 <a href="triagem.html" id="img_voltar"><img src="icons/icons8-voltar-24 (2).png" alt="Voltar"></a>
             </div>
 
             <h2>Selecione seus sintomas</h2>
 
+            <!-- Campo de pesquisa de sintomas -->
             <div class="input-container">
                 <input type="text" id="search-input" class="search-input" placeholder="Pesquisar sintomas..."
                     onkeyup="filterSymptoms()">
             </div>
 
+            <!-- Container para listar sintomas disponíveis -->
             <div class="symptoms-container" id="symptoms-container">
+                <!-- Opções de sintomas clicáveis -->
                 <div class="symptom-option" onclick="selectSymptom(this, 'Febre')">Febre</div>
                 <div class="symptom-option" onclick="selectSymptom(this, 'Dor de cabeça')">Dor de cabeça</div>
                 <div class="symptom-option" onclick="selectSymptom(this, 'Olhos vermelhos')">Olhos vermelhos</div>
@@ -50,17 +55,24 @@
                 <div class="symptom-option" onclick="selectSymptom(this, 'Falta de ar')">Falta de ar</div>
                 <div class="symptom-option" onclick="selectSymptom(this, 'Palpitações')">Palpitações</div>
             </div>
+
+            <!-- Mensagem de aviso para adicionar mais sintomas -->
             <p id="add-more-message">Por favor, tente adicionar mais sintomas.</p>
         </div>
+
+        <!-- Rodapé da página -->
         <div class="footer">
+            <!-- Contador de sintomas selecionados -->
             <div class="sintomas" id="symptom-count">0 Sintomas</div>
+            <!-- Botão para adicionar sintomas (com função JavaScript associada) -->
             <a href="#" class="button" onclick="submitSymptoms()">Adicionar</a>
         </div>
     </div>
 
+    <!-- Inclusão de script JavaScript -->
     <script src="js/add-symptoms.js"></script>
     <script>
-        // Função para lidar com a passagem do animal selecionado
+        // Função para obter o animal selecionado da URL
         function getSelectedAnimalFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
             const selectedAnimal = urlParams.get('selectedAnimal');
@@ -69,7 +81,7 @@
             }
         }
 
-        // Chame a função ao carregar a página
+        // Chama a função ao carregar a página
         window.onload = getSelectedAnimalFromURL;
     </script>
 </body>

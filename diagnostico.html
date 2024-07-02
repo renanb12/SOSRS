@@ -5,100 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagnóstico</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <style>
-        body {
-            background-color: #f5f5f5;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .header img {
-            width: 30px;
-            margin-right: 10px;
-        }
-
-        .header h1 {
-            font-size: 18px;
-            margin: 0;
-        }
-
-        .content {
-            margin: 20px 0;
-        }
-
-        .content h2 {
-            font-size: 16px;
-            margin: 0 0 10px 0;
-        }
-
-        .symptoms-container {
-            margin-bottom: 10px;
-        }
-
-        .symptom {
-            display: inline-block;
-            background-color: #e0e0e0;
-            padding: 5px 10px;
-            border-radius: 20px;
-            margin: 5px 0;
-            white-space: nowrap;
-        }
-
-        .selected-animal {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-        }
-
-        .button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #4caf50;
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .footer {
-            font-size: 12px;
-            color: #aaa;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .back-button {
-            background-color: #ddd;
-            color: #000;
-            margin-bottom: 10px;
-        }
-
-        .diagnosis {
-            margin: 20px 0;
-            padding: 10px;
-            background-color: #dff0d8;
-            border: 1px solid #d6e9c6;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/reset.css"> <!-- Inclui reset de CSS -->
+    <link rel="stylesheet" href="css/diagnostico.css"> <!-- Inclui estilos específicos para diagnóstico -->
 </head>
 
 <body>
@@ -106,7 +14,7 @@
     <header>
         <div class="container">
             <div class="header">
-                <h1>SOSRS</h1>
+                <h1>SOSRS</h1> <!-- Título principal -->
             </div>
         </div>
     </header>
@@ -114,11 +22,11 @@
     <section>
         <div class="container">
             <div class="content">
-                <h2>Seu Diagnóstico</h2>
-                <div class="symptoms-container" id="symptoms-container"></div>
-                <div id="selected-animal" class="selected-animal">Animal selecionado: Nenhum</div>
-                <div id="diagnosis" class="diagnosis"></div>
-                <a href="triagem.html" class="button back-button">Voltar</a>
+                <h2>Seu Diagnóstico</h2> <!-- Título da seção de diagnóstico -->
+                <div class="symptoms-container" id="symptoms-container"></div> <!-- Container para sintomas selecionados -->
+                <div id="selected-animal" class="selected-animal">Animal selecionado: Nenhum</div> <!-- Informação sobre o animal selecionado -->
+                <div id="diagnosis" class="diagnosis"></div> <!-- Resultado do diagnóstico -->
+                <a href="triagem.html" class="button back-button">Voltar</a> <!-- Botão para voltar à página de triagem -->
             </div>
         </div>
     </section>
@@ -126,86 +34,12 @@
     <footer>
         <div class="container">
             <div class="footer">
-                © 2024 SOSRS
+                © 2024 SOSRS <!-- Texto de rodapé -->
             </div>
         </div>
     </footer>
-    <script>
-        window.onload = function () {
-            const params = new URLSearchParams(window.location.search);
-            const symptoms = params.get('symptoms');
-            const selectedAnimal = params.get('selectedAnimal');
-
-            if (symptoms) {
-                const symptomsArray = symptoms.split(',');
-                const symptomsContainer = document.getElementById('symptoms-container');
-                symptomsArray.forEach(symptom => {
-                    const symptomDiv = document.createElement('div');
-                    symptomDiv.className = 'symptom';
-                    symptomDiv.innerText = symptom;
-                    symptomsContainer.appendChild(symptomDiv);
-                });
-            }
-
-            if (selectedAnimal) {
-                document.getElementById('selected-animal').innerText = `Animal selecionado: ${selectedAnimal}`;
-            }
-
-            const diagnosis = diagnose(symptoms.split(','));
-            document.getElementById('diagnosis').innerText = diagnosis;
-        }
-
-        function diagnose(symptoms) {
-            const diseases = [{
-                    name: 'Leptospirose',
-                    symptoms: ['Febre', 'Dor de cabeça', 'Sangramento', 'Dor muscular', 'Calafrio','Olhos vermelhos', 'Vômitos']
-                },
-                {
-                    name: 'Tétano',
-                    symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
-                },
-                {
-                    name: 'Diarreia aguda',
-                    symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
-                },
-                {
-                    name: 'Hepatite A',
-                    symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
-                },
-                {
-                    name: 'Dengue',
-                    symptoms: ['Febre', 'Dor muscular', 'Dor abdominal', 'Fadiga', 'Náusea']
-                }
-
-            ];
-
-            let possibleDiseases = [];
-
-            diseases.forEach(disease => {
-                let matchCount = 0;
-                disease.symptoms.forEach(diseaseSymptom => {
-                    if (symptoms.includes(diseaseSymptom)) {
-                        matchCount++;
-                    }
-                });
-
-                if (matchCount > 0) {
-                    possibleDiseases.push({
-                        name: disease.name,
-                        matchCount: matchCount
-                    });
-                }
-            });
-
-            if (possibleDiseases.length === 0) {
-                return 'Nenhuma doença correspondente encontrada.';
-            }
-
-            possibleDiseases.sort((a, b) => b.matchCount - a.matchCount);
-
-            return `Possível diagnóstico: ${possibleDiseases[0].name}`;
-        }
-    </script>
+    
+    <script src="js/diagnostico.js"></script> <!-- Script para lógica específica da página de diagnóstico -->
 </body>
 
 </html>
