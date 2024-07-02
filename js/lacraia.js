@@ -33,6 +33,6 @@ function selectImage(img, species) {
 function confirmAnimal() {
     if (selectedImage) {
         const selectedSpecies = selectedImage.dataset.species;
-        window.location.href = `index.html?selectedAnimal=${encodeURIComponent(selectedSpecies)}`;
+        window.location.href = `triagem.html?selectedAnimal=${encodeURIComponent(selectedSpecies)}`;
     }
 }

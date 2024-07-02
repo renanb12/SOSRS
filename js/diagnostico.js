@@ -37,26 +37,69 @@ window.onload = function () {
 
 // Função para realizar o diagnóstico com base nos sintomas recebidos
 function diagnose(symptoms) {
-    const diseases = [
-        {
+    const diseases = [{
             name: 'Leptospirose',
-            symptoms: ['Febre', 'Dor de cabeça', 'Sangramento', 'Dor muscular', 'Calafrio', 'Olhos vermelhos', 'Vômitos']
+            symptoms: [
+                'Febre alta',
+                'Dor de cabeça',
+                'Sangramentos',
+                'Dor muscular',
+                'Calafrios',
+                'Olhos vermelhos',
+                'Vômitos',
+                'Dor na panturrilha e lombar'
+            ]
         },
         {
             name: 'Tétano',
-            symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
+            symptoms: [
+                'Contrações musculares dolorosas',
+                'Dificuldade para respirar',
+                'Febre',
+                'Pressão alta',
+                'Sudorese'
+            ]
         },
         {
-            name: 'Diarreia aguda',
-            symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
+            name: 'Diarreia Aguda',
+            symptoms: [
+                'Sangramentos nas fezes',
+                'Dores abdominais',
+                'Muco nas fezes'
+            ]
         },
         {
             name: 'Hepatite A',
-            symptoms: ['Febre', 'Contrações musculares dolorosas', 'Falta de ar', 'Pressão alta', 'Sudorese']
+            symptoms: [
+                'Fadiga',
+                'Icterícia',
+                'Urina escura',
+                'Fezes claras',
+                'Perda de apetite'
+            ]
         },
         {
             name: 'Dengue',
-            symptoms: ['Febre', 'Dor muscular', 'Dor abdominal', 'Fadiga', 'Náusea']
+            symptoms: [
+                'Febre alta',
+                'Dores musculares',
+                'Erupções cutâneas',
+                'Dores nas articulações',
+                'Hemorragia intensa (casos graves)',
+                'Dificuldade para respirar (casos graves)',
+                'Edema (inchaço)',
+                'Rubor (vermelhidão)',
+                'Febre',
+                'Dor de cabeça'
+            ]
+        },
+        {
+            name: 'Animais Peçonhentos',
+            symptoms: [
+                'Lugares úmidos',
+                'Locais escuros',
+                'Áreas com entulhos ou destroços'
+            ]
         }
     ];
 
